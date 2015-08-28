@@ -25,8 +25,29 @@
     }
     var currTz = sessionStorage.getItem('timezone');
 
+### Шаг 2: Получение значения времени
+
+Moment работает с датой/временем в формате [UTC]([6]):
+
+    2015-08-12T14:30Z
+
+Используя Moment, мы можем легко изменять формат дат. Давайте рассмотрим небольшой пример. По-умолчанию Moment создает объект, основанный на текущей дате, который мы преобразуем в строку нужного формата.
+
+    var date = moment().format("YYYY-MM-DD");
+    
+Затем добавим к получившейся строке время:
+
+    var stamp = date + "T" + theTime + "Z";
+
+И, наконец, преобразуем строку в новый объект Moment:
+
+     var momentTime = moment(stamp);
+
+
+
  [1]: http://everytimezone.com/
  [2]: http://shoptalkshow.com/
  [3]: http://momentjs.com/
  [4]: http://momentjs.com/timezone/
  [5]: https://bitbucket.org/pellepim/jstimezonedetect
+ [6]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time
