@@ -15,6 +15,16 @@
 * moment.js
 * moment-timezone.js
 
+### Шаг 1: Получение таймзоны 
+
+После получения таймзоны, мы можем легко сохранить ее в localStorage. Этим мы обеспечим легкий доступ к сохраненным данным.
+
+    if (!sessionStorage.getItem('timezone')) {
+        var tz = jstz.determine() || 'UTC';
+        sessionStorage.setItem('timezone', tz.name());
+    }
+    var currTz = sessionStorage.getItem('timezone');
+
  [1]: http://everytimezone.com/
  [2]: http://shoptalkshow.com/
  [3]: http://momentjs.com/
