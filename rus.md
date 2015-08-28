@@ -41,9 +41,18 @@ Moment работает с датой/временем в формате [UTC]([
 
 И, наконец, преобразуем строку в новый объект Moment:
 
-     var momentTime = moment(stamp);
+    var momentTime = moment(stamp);
 
+### Шаг 3: Локализация времени
 
+Теперь мы можем приступить к локализации времени, используя Moment Timezone:
+
+    var tzTime = momentTime.tz(currTz);
+    
+И, конечно же, отформатируем получившееся значение для более удобного отображения:
+
+    var formattedTime = tzTime.format('h:mm A');
+ 
 
  [1]: http://everytimezone.com/
  [2]: http://shoptalkshow.com/
