@@ -59,9 +59,36 @@ Moment работает с датой/временем в формате [UTC]([
 
     output.textContent = "Time in " + currTz + ": " + formattedTime;
 
+### Дополнительная настройка
+
+Иногда бывает полезно предоставлять пользователям возможность вводить даты на сайте в их локальной таймзоне. Но, хранить подобную информацию удобнее в формате UTC. Moment может сделать это достаточно легко:
+
+    moment().subtract(4, 'hours');
+    moment().add(3, 'hours');
+    
+Мы можем выполнить подобные манипуляции и на сервере, используя, например, PHP:
+
+    <?php $sixHoursAgo = strtotime("-6 hours", time()); ?>
+    
+Хотя, в подобных преобразованиях лучше использовать [Moment Timezone]([7]), чтобы избежать неточностей, связанных с переводом времени на летнее. 
+
+### Demo
+
+В примере ниже мы будем использовать HTML5 time-эдитор и конвертировать время в локальное на лету.  
+
+    // demo sample
+    
+### Иные способы локализации
+
+Есть ли у вас опыт решения задач локализации времени? В статье мы использовали довольно объемные сторонние библиотеки, хотя в JavaScript уже есть нативные методы(например, [getTimezoneOffset()]([8])), с помощью которых можно добиться аналогичных результатов. Было бы интересно увидеть ваши решения.
+
+
+
  [1]: http://everytimezone.com/
  [2]: http://shoptalkshow.com/
  [3]: http://momentjs.com/
  [4]: http://momentjs.com/timezone/
  [5]: https://bitbucket.org/pellepim/jstimezonedetect
  [6]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time
+ [7]: http://momentjs.com/timezone/
+ [8]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
