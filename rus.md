@@ -77,7 +77,7 @@
 
 В примере ниже мы будем использовать HTML5 time-эдитор и конвертировать время в локальное на лету.  
 
-<p data-height="268" data-theme-id="0" data-slug-hash="WvWeNa" data-default-tab="result" data-user="chriscoyier" class='codepen'>See the Pen <a href='http://codepen.io/chriscoyier/pen/WvWeNa/'>Adjusting Times to Local Time Zones</a> by Chris Coyier (<a href='http://codepen.io/chriscoyier'>@chriscoyier</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="268" data-theme-id="18531" data-slug-hash="zvxZgw" data-default-tab="result" data-user="SergeyAlexeev" class='codepen'>See the Pen <a href='http://codepen.io/SergeyAlexeev/pen/zvxZgw/'>Adjusting Times to Local Time Zones</a> by Sergey (<a href='http://codepen.io/SergeyAlexeev'>@SergeyAlexeev</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
     
 ### Иные способы локализации
